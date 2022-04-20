@@ -1,0 +1,84 @@
+.container {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  min-height: 50vh;
+}
+
+.container .header__table {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  background-color: cornflowerblue;
+  border-radius: 10px;
+}
+
+.container .header__table h1 {
+  text-transform: capitalize;
+}
+
+.container table {
+  min-height: 20vh;
+  position: relative;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.container table td {
+  font-size: 1.5rem;
+}
+
+.message {
+  position: absolute;
+  top: 5rem;
+  left: 35%;
+  width: 30%;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 10px;
+  color: whitesmoke;
+  -webkit-box-shadow: inset 2px 2px rgba(0, 0, 0, 0.5), inset 2px 2px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 2px 2px rgba(0, 0, 0, 0.5), inset 2px 2px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  -webkit-animation: opacity 2s ease-out;
+          animation: opacity 2s ease-out;
+}
+
+.items-toevoeging {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  font-size: 1.5rem;
+}
+
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 2;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 2;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */
