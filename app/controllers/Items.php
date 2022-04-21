@@ -9,6 +9,7 @@
         public function index(){
             $dashboard = $this->itemsModel->dashBoard();
             $setValue = "";
+            // hier maak ik for loop van de data
             foreach($dashboard as $value){
                 $setValue .= "
                 $value->studentnummer
@@ -16,19 +17,22 @@
                 $value->infix
                 $value->lastname
                 $value->email
-                $value->phoneNumber
+                $value->phoneNumber<br>
                 ";
             }
+            // hier verstop ik de data in een variable om terug te krijgen in de views
             $data =  ['title' => 'dashboard',
                         'userData' => $setValue];
              return $this->view('Items/dashboard', $data);
         }
+
 
         public function readlist(){
             try{
             $model = $this->itemsModel->ictItems();
             $tablesRow = "";
             foreach($model as $value){
+                // hier maak ik switch case van de status om in woorden om te zitten inplaats van nummmer
                 switch($value->productStatus){
                     case "0":
                         $status = "<button class='bg-danger p-2 text-white' disabled>Niet leverbaar</button>";
