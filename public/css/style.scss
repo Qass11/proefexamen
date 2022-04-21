@@ -40,6 +40,39 @@
     z-index: 10000;
 }
 
+.productname, .aantalproductenm, .productDiscription{
+    position: relative;
+    .error-product-name , .error-aantal-producten, .error-discription{
+        span{
+            font-size: 1rem;
+            color: red;
+            position: absolute;
+            top: 2.3rem;
+            right: 1rem;
+            font-weight: 500;
+        }
+        i{
+            font-size: 1.7rem;
+            color: green;
+            position: absolute;
+            top: 2.3rem;
+            right: 1rem;
+        }
+    }
+}
+
+.alle-errors{
+    position: fixed;
+    top: 1.5rem;
+    left: 35%;
+    padding: 1.3rem 1.5rem;
+    background-color: rgba(0,0,0,0.9);
+    color: #fff;
+    font-size: 1.5rem;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+}
+
+
 .items-toevoeging{
     width: 100%;
     display: flex;

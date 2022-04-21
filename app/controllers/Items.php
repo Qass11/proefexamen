@@ -4,26 +4,31 @@
         {
             // hier gaat de model plaatsvinden
             $this->itemsModel = $this->model('ItemsModel');
+            session_start();
         }
 
         public function index(){
+            $_SERVER['REQUEST_METHOD'] == 'POST';
+            $emailform = $_REQUEST['email'];
             $dashboard = $this->itemsModel->dashBoard();
             $setValue = "";
             // hier maak ik for loop van de data
             foreach($dashboard as $value){
                 $setValue .= "
-                $value->studentnummer
-                $value->firstname
-                $value->infix
-                $value->lastname
-                $value->email
-                $value->phoneNumber<br>
+                <tr>
+                <td>$value->studentnummer</td>
+                <td>$value->firstname<td/>
+                <td>$value->infix</td>
+                <td>$value->lastname</td>
+                <td>$value->email</td>
+                <td>$value->phoneNumber</td>
+                </tr>
                 ";
             }
+            $_SESSION['data'] = $setValue;
             // hier verstop ik de data in een variable om terug te krijgen in de views
-            $data =  ['title' => 'dashboard',
-                        'userData' => $setValue];
-             return $this->view('Items/dashboard', $data);
+            $data =  ['title' => 'dashboard',];
+             return $this->view('Items/dashboard', $data,);
         }
 
 

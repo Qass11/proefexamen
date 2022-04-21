@@ -6,6 +6,10 @@
       </div>
     </div>
     <form action="<?= URLROOT ?>/Items/dashboard" method="POST">
+    <div class="email">
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email">
+    </div>
     <select class="form-select" name="role" aria-label="Default select example">
       <?= $data['roleList']; ?>
     </select>

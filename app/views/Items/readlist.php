@@ -11,7 +11,7 @@ if (isset($_GET['message'])) {
         <h3>Deze record is niet gewijzegd!</h3>
         </div>";
     }elseif($_GET['message'] == 'Toegevoegd'){
-        echo "<div class='message bg-danger'>
+        echo "<div class='message bg-success'>
         <h3>Deze nieuwe record is goed toegevoed!</h3>
         </div>";
     }
@@ -26,7 +26,7 @@ if (isset($_GET['message'])) {
 
 
 <section>
-<div class="container w-100">
+<div class="container w-100 mt-5">
     <div class="header__table">
         <h1>Items beheer</h1>
     </div>
@@ -47,7 +47,9 @@ if (isset($_GET['message'])) {
                 </tr>
             </thead>
             <tbody>
+                <tr>
                 <?= $data['data']; ?>
+                </tr>
             </tbody>
         </table>
     </div>
