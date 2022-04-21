@@ -1,2 +1,5 @@
 <?php require APPROOT . '/views/header.php'?>
-<?php require APPROOT . '/views/sidebar.php'; ?>
+<?php require APPROOT . '/views/includes/sidebar.php'?>
+<section>
+<?= $data['userData']; ?>
+</section>

@@ -11,7 +11,7 @@
             $tablesRow = "";
             foreach($model as $value){
                 $tablesRow .= "
-                <option>$value->userRole</option>
+                <option value='$value->userRole'>$value->userRole</option>
                 ";
             }
 

@@ -5,10 +5,13 @@
         <h1 class="text-center">Kies je rol</h1>
       </div>
     </div>
-    <select class="form-select" aria-label="Default select example">
+    <form action="<?= URLROOT ?>/Items/dashboard" method="POST">
+    <select class="form-select" name="role" aria-label="Default select example">
       <?= $data['roleList']; ?>
     </select>
     <div class="col-12 mt-3">
-      <a href="<?= URLROOT ?>/Items/dashboard">Inloggen</a>
+      <button type="submit">Inloggen</button>
     </div>
+    </form>
   </div>
+

@@ -6,17 +6,13 @@
     <form action="<?= URLROOT ?>/Items/insert" method="POST">
         <div class="row">
             <div class="col-12">
-                <h1 class="text-center">Insert the records</h1>
+                <h1 class="text-center">Voeg een Ict items</h1>
             </div>
         </div>
         <div class="mb-3">
             <label for="prodcutName" class="form-label">Product Naam</label>
             <input type="text" name="productName" class="form-control" id="prodcutName">
         </div>
-        <!-- <div class="mb-3">
-            <label for="productcode" class="form-label">Product Code</label>
-            <input type="text" name="productCode" class="form-control" id="productcode">
-        </div> -->
         <input type="hidden" name="productCode">
         <div class="mb-3">
             <label for="aantaalproducten" class="form-label">Aaantal Producten</label>
@@ -42,6 +38,6 @@
         </div>
 
         <input type="hidden" name="id">
-        <button type="submit" name="submit" class="btn btn-primary">Wijziging</button>
+        <button type="submit" name="submit" class="btn btn-primary">Toevoegen</button>
     </form>
 </div>

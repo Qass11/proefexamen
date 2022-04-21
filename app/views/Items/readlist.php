@@ -1,5 +1,5 @@
 <?php require APPROOT . '/views/header.php' ?>
-
+<?php require APPROOT . '/views/includes/sidebar.php' ?>
 <?php
 if (isset($_GET['message'])) {
     if ($_GET['message'] == 'Goed') {
@@ -10,11 +10,23 @@ if (isset($_GET['message'])) {
         echo "<div class='message bg-danger'>
         <h3>Deze record is niet gewijzegd!</h3>
         </div>";
+    }elseif($_GET['message'] == 'Toegevoegd'){
+        echo "<div class='message bg-danger'>
+        <h3>Deze nieuwe record is goed toegevoed!</h3>
+        </div>";
+    }
+    elseif($_GET['message'] == 'Deleted'){
+        echo "<div class='message bg-success'>
+        <h3>Deze rij is succesvol verijderd!</h3>
+        </div>";
     }
 }
+
 ?>
 
-<div class="container w-75">
+
+<section>
+<div class="container w-100">
     <div class="header__table">
         <h1>Items beheer</h1>
     </div>
@@ -39,8 +51,8 @@ if (isset($_GET['message'])) {
             </tbody>
         </table>
     </div>
-
 </div>
+</section>
 
 
 

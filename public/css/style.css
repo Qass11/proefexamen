@@ -43,8 +43,9 @@
   -webkit-box-shadow: inset 2px 2px rgba(0, 0, 0, 0.5), inset 2px 2px rgba(0, 0, 0, 0.5);
           box-shadow: inset 2px 2px rgba(0, 0, 0, 0.5), inset 2px 2px rgba(0, 0, 0, 0.5);
   opacity: 0;
-  -webkit-animation: opacity 2s ease-out;
-          animation: opacity 2s ease-out;
+  -webkit-animation: opacity 3s ease-out;
+          animation: opacity 3s ease-out;
+  z-index: 10000;
 }
 
 .items-toevoeging {
@@ -80,5 +81,42 @@
   100% {
     opacity: 0;
   }
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  color: #fff;
+  width: 25%;
+  min-height: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-content: start;
+}
+
+.navbar h1 {
+  font-weight: bold;
+}
+
+.navbar ul {
+  width: 100%;
+  display: block;
+  padding: 1rem 2rem;
+}
+
+.navbar ul li {
+  margin: 2rem;
+  font-size: 1.2rem;
+  list-style: none;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+}
+
+section {
+  padding: 0 30rem;
 }
 /*# sourceMappingURL=style.css.map */

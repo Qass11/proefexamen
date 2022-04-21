@@ -14,10 +14,6 @@
             <input type="text" name="productName" value="<?= $data['data']->productName ?>" class="form-control" id="prodcutName">
         </div>
         <div class="mb-3">
-            <label for="productcode" class="form-label">Product Code</label>
-            <input type="text" name="productCode" value="<?= $data['data']->productCode ?>" class="form-control" id="productcode">
-        </div>
-        <div class="mb-3">
             <label for="aantaalproducten" class="form-label">Aaantal Producten</label>
             <input type="number" name="aantalProducten" value="<?= $data['data']->aantalProducten ?>" class="form-control" id="aantaalproducten">
         </div>
@@ -29,8 +25,8 @@
         </div>
         <div class="mb-3">
             <select class="form-select" name="status" aria-label="Default select example">
-              <option value="0">Beschikbaar</option>
-              <option value="1">Niet beschikbaar</option>
+              <option value="1">Beschikbaar</option>
+              <option value="0">Niet beschikbaar</option>
             </select>
         </div>
         <input type="hidden" name="id" value="<?= $data['data']->id ?>">

@@ -7,9 +7,21 @@
         }
 
         public function index(){
-            $data =  ['title' => 'dashboard'];
-
-            return $this->view('Items/dashboard', $data);
+            $dashboard = $this->itemsModel->dashBoard();
+            $setValue = "";
+            foreach($dashboard as $value){
+                $setValue .= "
+                $value->studentnummer
+                $value->firstname
+                $value->infix
+                $value->lastname
+                $value->email
+                $value->phoneNumber
+                ";
+            }
+            $data =  ['title' => 'dashboard',
+                        'userData' => $setValue];
+             return $this->view('Items/dashboard', $data);
         }
 
         public function readlist(){
@@ -37,10 +49,12 @@
                 <td>$status</td>
                 <td>$value->User_id</td>
                 <td><a href='". URLROOT ."/Items/update/$value->id'><i class='fa-solid fa-pen-to-square'></i></a></td>
-                <td><a href='". URLROOT ."/Items/delete/$value->id'><i class='fa-solid fa-trash-can'></i></a></td>
+                <td><a href='". URLROOT ."/Items/delete/$value->id'><i class='fa-solid fa-trash-can trash'></i></a></td>
                 </tr>
                 ";
             }
+            $id = null;
+
             $data =  ['title' => 'dashboard',
                         'data' => $tablesRow];
 
@@ -53,11 +67,12 @@
         public function update($id = null){
             try{
                 if($_SERVER['REQUEST_METHOD'] == 'POST'){
+                    $status = $_POST['status'];
                     $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
                      $model = $this->itemsModel->updateItems($_POST);
                     $msg  ='';
                     $model ? true == $msg = "Goed" : false == $msg = "Fout";
-                    header("Refresh: 3; url=". URLROOT ."/Items/readlist?message=$msg");
+                    header("Location: ". URLROOT ."/Items/readlist?message=$msg");
                 }else{
                 $model = $this->itemsModel->getSingleCountriesId($id);
                 $data = ['title' => 'update page',
@@ -77,6 +92,9 @@
                     $productCode = '#' . rand();
                     $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
                     $model = $this->itemsModel->insertData($_POST, $productCode);
+                    $msg  ='';
+                    $model ? true == $msg = "Toegevoegd" : false == $msg = "Fout";
+                    header("Location: ". URLROOT ."/Items/readlist?message=$msg");
                 }else{
 
                     $model = $this->itemsModel->ictItems();
@@ -100,10 +118,9 @@
         public function delete($id){
             $model = $this->itemsModel->deleteData($id);
             $msg  ='';
-                    $model ? true == $msg = "Goed" : false == $msg = "Fout";
+                    $model ? true == $msg = "Deleted" : false == $msg = "Fout";
                     header("Location: ". URLROOT ."/Items/readlist?message=$msg");
         }
 
 
     }
-?>

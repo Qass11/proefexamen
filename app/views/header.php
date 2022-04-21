@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="<?= URLROOT ?>/public/css/style.css" type="text/css">
 
   <!-- custom javascript file link -->
-  <script src="" defer type="text/javascript"></script>
+  <script src="<?= URLROOT ?>/public/js/script.js" defer type="text/javascript"></script>
 
   <!-- custom cdn fontawesome icon file link -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
