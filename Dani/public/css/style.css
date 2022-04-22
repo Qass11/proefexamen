@@ -1,0 +1,155 @@
+.container {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  min-height: 50vh;
+}
+
+.container .header__table {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  background-color: cornflowerblue;
+  border-radius: 10px;
+}
+
+.container .header__table h1 {
+  text-transform: capitalize;
+}
+
+.container table {
+  min-height: 20vh;
+  position: relative;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.container table td {
+  font-size: 1.5rem;
+}
+
+.message {
+  position: absolute;
+  top: 5rem;
+  left: 35%;
+  width: 30%;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 10px;
+  color: whitesmoke;
+  -webkit-box-shadow: inset 2px 2px rgba(0, 0, 0, 0.5), inset 2px 2px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 2px 2px rgba(0, 0, 0, 0.5), inset 2px 2px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  -webkit-animation: opacity 3s ease-out;
+          animation: opacity 3s ease-out;
+  z-index: 10000;
+}
+
+.productname, .aantalproductenm, .productDiscription {
+  position: relative;
+}
+
+.productname .error-product-name span, .productname .error-aantal-producten span, .productname .error-discription span, .aantalproductenm .error-product-name span, .aantalproductenm .error-aantal-producten span, .aantalproductenm .error-discription span, .productDiscription .error-product-name span, .productDiscription .error-aantal-producten span, .productDiscription .error-discription span {
+  font-size: 1rem;
+  color: red;
+  position: absolute;
+  top: 2.3rem;
+  right: 1rem;
+  font-weight: 500;
+}
+
+.productname .error-product-name i, .productname .error-aantal-producten i, .productname .error-discription i, .aantalproductenm .error-product-name i, .aantalproductenm .error-aantal-producten i, .aantalproductenm .error-discription i, .productDiscription .error-product-name i, .productDiscription .error-aantal-producten i, .productDiscription .error-discription i {
+  font-size: 1.7rem;
+  color: green;
+  position: absolute;
+  top: 2.3rem;
+  right: 1rem;
+}
+
+.alle-errors {
+  position: fixed;
+  top: 1.5rem;
+  left: 35%;
+  padding: 1.3rem 1.5rem;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  font-size: 1.5rem;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+}
+
+.items-toevoeging {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  font-size: 1.5rem;
+}
+
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 2;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 2;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  color: #fff;
+  width: 25%;
+  min-height: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-content: start;
+}
+
+.navbar h1 {
+  font-weight: bold;
+}
+
+.navbar ul {
+  width: 100%;
+  display: block;
+  padding: 1rem 2rem;
+}
+
+.navbar ul li {
+  margin: 2rem;
+  font-size: 1.2rem;
+  list-style: none;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+}
+
+section {
+  padding: 0 30rem;
+}
+/*# sourceMappingURL=style.css.map */

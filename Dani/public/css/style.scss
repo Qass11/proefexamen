@@ -1,0 +1,125 @@
+.container{
+    display: grid;
+    align-items: center;
+    width: 100%; 
+    min-height: 50vh;
+    .header__table{
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+        background-color: cornflowerblue;
+        border-radius: 10px;
+        h1{
+            text-transform: capitalize;
+        }
+    }
+    table{
+        min-height: 20vh;
+        position: relative;
+        border: 2px solid rgba(0,0,0,0.5);
+        td{
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.message{
+    position: absolute;
+    top: 5rem;
+    left: 35%;
+    width: 30%;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 10px;
+    color: whitesmoke;
+    box-shadow: inset 2px 2px rgba(0,0,0,0.5),
+    inset 2px 2px rgba(0,0,0,0.5);
+    opacity: 0;
+    animation: opacity 3s ease-out;
+    z-index: 10000;
+}
+
+.productname, .aantalproductenm, .productDiscription{
+    position: relative;
+    .error-product-name , .error-aantal-producten, .error-discription{
+        span{
+            font-size: 1rem;
+            color: red;
+            position: absolute;
+            top: 2.3rem;
+            right: 1rem;
+            font-weight: 500;
+        }
+        i{
+            font-size: 1.7rem;
+            color: green;
+            position: absolute;
+            top: 2.3rem;
+            right: 1rem;
+        }
+    }
+}
+
+.alle-errors{
+    position: fixed;
+    top: 1.5rem;
+    left: 35%;
+    padding: 1.3rem 1.5rem;
+    background-color: rgba(0,0,0,0.9);
+    color: #fff;
+    font-size: 1.5rem;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+}
+
+
+.items-toevoeging{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    font-size: 1.5rem;
+}
+
+@keyframes opacity{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 2;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    color: #fff;
+    width: 25%;
+    min-height: 100%;
+    display: grid;
+    place-content: start;
+    h1{
+        font-weight: bold;
+    }
+    ul{
+        width: 100%;
+        display: block;
+        padding: 1rem 2rem;
+        li{
+            margin: 2rem;
+            font-size: 1.2rem;
+            list-style: none;
+            a{
+                text-decoration: none;
+            }
+        }
+    }  
+}
+
+section{
+    padding: 0 30rem;
+}
